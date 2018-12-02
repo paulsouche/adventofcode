@@ -1,4 +1,7 @@
 .fake
 bin
+coverage
+dist
+node_modules
 obj
 TestResults

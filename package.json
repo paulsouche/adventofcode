@@ -1,0 +1,17 @@
+{
+  "name": "adventofcode2018",
+  "private": true,
+  "workspaces": [
+    "days/*"
+  ],
+  "scripts": {
+    "lint": "lerna run lint",
+    "start": "lerna run start",
+    "test": "lerna run test"
+  },
+  "author": "paulsouche <paul.souche@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "lerna": "^3.0.0"
+  }
+}
