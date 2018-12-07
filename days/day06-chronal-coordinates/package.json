@@ -1,0 +1,24 @@
+{
+  "name": "day06-chronal-coordinates",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "lint": "tslint **/*.ts",
+    "start": "ts-node index.ts",
+    "test": "jest --coverage"
+  },
+  "dependencies": {
+    "colors": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.0.0",
+    "jest": "^23.0.0",
+    "ts-jest": "^23.0.0",
+    "ts-node": "^7.0.0",
+    "tslint": "^5.0.0",
+    "typescript": "^3.0.0"
+  },
+  "jest": {
+    "preset": "ts-jest"
+  }
+}
