@@ -1,8 +1,8 @@
-type Register = [number, number, number, number];
+export type Register = number[];
 
 type Instruction = (...args: number[]) => (register: Register) => Register;
 
-interface OpCode {
+export interface OpCode {
   name: string;
   instruction: Instruction;
 }
