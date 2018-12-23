@@ -1,0 +1,34 @@
+#ip 4
+a, b, c, d, ip, e
+
+0  seti 123 0 3      # d = 123
+1  bani 3 456 3      # d = d & 456 => 72 if d = 123
+2  eqri 3 72 3       # d = d === 72 ? 1 : 0          # if (d === 72) GOTO 5
+3  addr 3 4 4        # ip = ip + d                   # else GOTO 4
+4  seti 0 0 4        # ip = 0                        # GOTO 0
+5  seti 0 2 3        # d = 0
+6  bori 3 65536 2    # c = d | 65536 (65536 + d ?)
+7  seti 1397714 1 3  # d = 1397714
+8  bani 2 255 5      # e = c & 255
+9  addr 3 5 3        # d += ip
+10 bani 3 16777215 3 # d = d & 16777215
+11 muli 3 65899 3    # d *= 65899
+12 bani 3 16777215 3 # d = d & 16777215
+13 gtir 256 2 5      # e = 256 > c ? 1 : 0           # if (c < 256) GOTO 16
+14 addr 5 4 4        # ip += e                       # else GOTO 15
+15 addi 4 1 4        # ip += 1                       # GOTO 17
+16 seti 27 6 4       # ip = 27                       # GOTO 27
+17 seti 0 6 5        # e = 0
+18 addi 5 1 1        # b = e + 1
+19 muli 1 256 1      # b *= 256
+20 gtrr 1 2 1        # b = b > c ? 1 : 0             # if (b > c) GOTO 23
+21 addr 1 4 4        # ip += b                       # else GOTO 22
+22 addi 4 1 4        # ip += 1                       # GOTO 24
+23 seti 25 2 4       # ip = 25                       # GOTO 25
+24 addi 5 1 5        # e += 1
+25 seti 17 0 4       # ip = 17                       # GOTO 17
+26 setr 5 7 2        # c = e
+27 seti 7 4 4        # ip = 7                        # GOTO 7
+28 eqrr 3 0 5        # e = d === a ? 1 : 0           # if (d === a) BREAK
+29 addr 5 4 4        # ip += e                       # else GOTO 5
+30 seti 5 8 4        # ip = 5

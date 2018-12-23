@@ -41,7 +41,7 @@ const operationMap: {
   setr,
 };
 
-function parseIp(str: string | undefined) {
+export function parseIp(str: string | undefined) {
   const match = ipReg.exec(str || '');
 
   if (!match) {
@@ -51,7 +51,7 @@ function parseIp(str: string | undefined) {
   return +match[1];
 }
 
-function parseProg(str: string) {
+export function parseProg(str: string) {
   const match = progReg.exec(str || '');
 
   if (!match) {
