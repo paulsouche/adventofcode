@@ -1,0 +1,9 @@
+[package]
+name = "adventofcode2019"
+version = "1.0.0"
+authors = ["Paul Souche <paul.souche@gmail.com>"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]

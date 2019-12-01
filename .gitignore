@@ -4,4 +4,7 @@ coverage
 dist
 node_modules
 obj
+!src/bin
+/target
 TestResults
+**/*.rs.bk
