@@ -8,3 +8,4 @@ edition = "2021"
 
 [dependencies]
 permutohedron = "^0.2.4"
+regex = "1"
