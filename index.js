@@ -25,6 +25,12 @@ import {
   day6Input,
   redistribution,
 } from "./days/day06-memory-reallocation/index.js";
+import {
+  day7Input,
+  day7TestInput,
+  rootProgram,
+  weight,
+} from "./days/day07-recursive-circus/index.js";
 
 // DAY 1: Inverse Captcha
 console.assert(sum("1122") === 3, "sum(1122) NOK");
@@ -98,3 +104,12 @@ console.assert(
   "redistribution([0, 2, 7, 0]).size NOK"
 );
 console.info("Day 6-2:", redistribution(day6Input).size);
+
+// DAY 7: Recursive Circus
+console.assert(
+  rootProgram(day7TestInput) === "tknk",
+  "rootProgram(day7TestInput) NOK"
+);
+console.info("Day 7-1:", rootProgram(day7Input));
+console.assert(weight(day7TestInput) === 60, "findWeight(day7TestInput) NOK");
+console.info("Day 7-2:", weight(day7Input));
