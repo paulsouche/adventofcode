@@ -11,6 +11,11 @@ import {
   manhattanDistance,
   manhattanValue,
 } from "./days/day03-spiral-memory/index.js";
+import {
+  day4Input,
+  isValid,
+  valids,
+} from "./days/day04-high-entropy-passphrases/index.js";
 
 // DAY 1: Inverse Captcha
 console.assert(sum("1122") === 3, "sum(1122) NOK");
@@ -39,3 +44,27 @@ console.assert(manhattanDistance(1024) === 31, "manhattanDistance(1024): NOK");
 console.info("Day 3-1:", manhattanDistance(day3Input));
 console.assert(manhattanValue(747) === 806, "manhattanValue(747): NOK");
 console.info("Day 3-2:", manhattanValue(day3Input));
+
+// DAY 4: High-Entropy Passphrases
+console.assert(isValid("aa bb cc dd ee"), "isValid(aa bb cc dd ee) NOK");
+console.assert(!isValid("aa bb cc dd aa"), "isValid(aa bb cc dd aa) NOK");
+console.assert(isValid("aa bb cc dd aaa"), "isValid(aa bb cc dd aaa) NOK");
+console.info("Day 4-1:", valids(day4Input));
+console.assert(isValid("abcde fghij", true), "isValid(abcde fghij) NOK");
+console.assert(
+  !isValid("abcde xyz ecdab", true),
+  "isValid(abcde xyz ecdab) NOK"
+);
+console.assert(
+  isValid("a ab abc abd abf abj", true),
+  "isValid(a ab abc abd abf abj) NOK"
+);
+console.assert(
+  isValid("iiii oiii ooii oooi oooo", true),
+  "isValid(iiii oiii ooii oooi oooo) NOK"
+);
+console.assert(
+  !isValid("oiii ioii iioi iiio", true),
+  "isValid(a ab abc abd abf abj) NOK"
+);
+console.info("Day 4-2:", valids(day4Input, true));
