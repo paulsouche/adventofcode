@@ -21,6 +21,10 @@ import {
   steps,
   strangerSteps,
 } from "./days/day05-a-maze-of-twisty-trampolines--all-alike/index.js";
+import {
+  day6Input,
+  redistribution,
+} from "./days/day06-memory-reallocation/index.js";
 
 // DAY 1: Inverse Captcha
 console.assert(sum("1122") === 3, "sum(1122) NOK");
@@ -82,3 +86,15 @@ console.assert(
   "strangerSteps([0, 3, 0, 1, -3]) NOK"
 );
 console.info("Day 5-2:", strangerSteps(day5Input));
+
+// DAY 6: Memory Reallocation
+console.assert(
+  redistribution([0, 2, 7, 0]).allocations === 5,
+  "redistribution([0, 2, 7, 0]).allocations NOK"
+);
+console.info("Day 6-1:", redistribution(day6Input).allocations);
+console.assert(
+  redistribution([0, 2, 7, 0]).size === 4,
+  "redistribution([0, 2, 7, 0]).size NOK"
+);
+console.info("Day 6-2:", redistribution(day6Input).size);
