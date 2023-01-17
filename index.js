@@ -16,6 +16,11 @@ import {
   isValid,
   valids,
 } from "./days/day04-high-entropy-passphrases/index.js";
+import {
+  day5Input,
+  steps,
+  strangerSteps,
+} from "./days/day05-a-maze-of-twisty-trampolines--all-alike/index.js";
 
 // DAY 1: Inverse Captcha
 console.assert(sum("1122") === 3, "sum(1122) NOK");
@@ -68,3 +73,12 @@ console.assert(
   "isValid(a ab abc abd abf abj) NOK"
 );
 console.info("Day 4-2:", valids(day4Input, true));
+
+// DAY 5: A Maze of Twisty Trampolines, All Alike
+console.assert(steps([0, 3, 0, 1, -3]) === 5, "steps([0, 3, 0, 1, -3]) NOK");
+console.info("Day 5-1:", steps(day5Input));
+console.assert(
+  strangerSteps([0, 3, 0, 1, -3]) === 10,
+  "strangerSteps([0, 3, 0, 1, -3]) NOK"
+);
+console.info("Day 5-2:", strangerSteps(day5Input));
