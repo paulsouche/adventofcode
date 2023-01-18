@@ -72,6 +72,12 @@ import {
   neighbor0,
   spinlock,
 } from "./days/day17-spinlock/index.js";
+import {
+  day18Input,
+  day18TestInput,
+  duet,
+  duetWithDocumentation,
+} from "./days/day18-duet/index.js";
 
 // DAY 1: Inverse Captcha
 console.assert(sum("1122") === 3, "sum(1122) NOK");
@@ -314,3 +320,8 @@ console.info("Day 16-2", promenade(day16Programs, day16Input, 34).programs);
 console.assert(spinlock(3, 2017) === 638, "spinlock(3, 2017) NOK");
 console.info("Day 17-1", spinlock(day17Input, 2017));
 console.info("Day 17-2", neighbor0(day17Input, 50_000_000));
+
+// DAY 18: Duet
+console.assert(duet(day18TestInput) === 4, "duet(day18TestInput) NOK");
+console.info("Day 18-1", duet(day18Input));
+console.info("Day 18-2", duetWithDocumentation(day18Input));
