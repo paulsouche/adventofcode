@@ -60,6 +60,13 @@ import {
 } from "./days/day13-packet-scanners/index.js";
 import { day14Input, usage } from "./days/day14-disk-defragmentation/index.js";
 import { day15Input, judge } from "./days/day15-dueling-generators/index.js";
+import {
+  day16Input,
+  day16Programs,
+  day16TestInput,
+  day16TestPrograms,
+  promenade,
+} from "./days/day16-permutation-promenade/index.js";
 
 // DAY 1: Inverse Captcha
 console.assert(sum("1122") === 3, "sum(1122) NOK");
@@ -284,3 +291,16 @@ console.assert(
   "judge(65, 8921, 4, 8, 5_000_000) NOK"
 );
 console.info("Day 15-2", judge(day15Input.A, day15Input.B, 4, 8, 5_000_000));
+
+// DAY 16 : Permutation Promenade
+console.assert(
+  promenade(day16TestPrograms, day16TestInput).programs === "baedc",
+  "promenade(day16TestPrograms, day16TestInput) NOK"
+);
+console.info("Day 16-1", promenade(day16Programs, day16Input).programs);
+// This is reached in 42 operations 1_000_000_000 % 42 = 34
+console.assert(
+  promenade(day16Programs, day16Input, 1_000_000_000).modulo === 42,
+  "promenade(day16Programs, day16Input, 1_000_000_000).modulo NOK"
+);
+console.info("Day 16-2", promenade(day16Programs, day16Input, 34).programs);
