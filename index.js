@@ -78,6 +78,11 @@ import {
   duet,
   duetWithDocumentation,
 } from "./days/day18-duet/index.js";
+import {
+  day19Input,
+  day19TestInput,
+  tube,
+} from "./days/day19-a-series-of-tubes/index..js";
 
 // DAY 1: Inverse Captcha
 console.assert(sum("1122") === 3, "sum(1122) NOK");
@@ -325,3 +330,15 @@ console.info("Day 17-2", neighbor0(day17Input, 50_000_000));
 console.assert(duet(day18TestInput) === 4, "duet(day18TestInput) NOK");
 console.info("Day 18-1", duet(day18Input));
 console.info("Day 18-2", duetWithDocumentation(day18Input));
+
+// DAY 19: A Series of Tubes
+console.assert(
+  tube(day19TestInput).word === "ABCDEF",
+  "tube(day19TestInput).word NOK"
+);
+console.info("Day 19-1", tube(day19Input).word);
+console.assert(
+  tube(day19TestInput).totalSteps === 38,
+  "tube(day19TestInput).step NOK"
+);
+console.info("Day 19-2", tube(day19Input).totalSteps);
