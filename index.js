@@ -31,6 +31,12 @@ import {
   rootProgram,
   weight,
 } from "./days/day07-recursive-circus/index.js";
+import {
+  day8Input,
+  day8TestInput,
+  largest,
+  largestEver,
+} from "./days/day08-i-heard-you-like-registers/index.js";
 
 // DAY 1: Inverse Captcha
 console.assert(sum("1122") === 3, "sum(1122) NOK");
@@ -113,3 +119,12 @@ console.assert(
 console.info("Day 7-1:", rootProgram(day7Input));
 console.assert(weight(day7TestInput) === 60, "findWeight(day7TestInput) NOK");
 console.info("Day 7-2:", weight(day7Input));
+
+// DAY 8: I Heard You Like Registers
+console.assert(largest(day8TestInput) === 1, "largest(day8TestInput) NOK");
+console.info("Day 8-1:", largest(day8Input));
+console.assert(
+  largestEver(day8TestInput) === 10,
+  "largestEver(day8TestInput) NOK"
+);
+console.info("Day 8-2:", largestEver(day8Input));
