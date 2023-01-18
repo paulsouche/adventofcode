@@ -67,6 +67,11 @@ import {
   day16TestPrograms,
   promenade,
 } from "./days/day16-permutation-promenade/index.js";
+import {
+  day17Input,
+  neighbor0,
+  spinlock,
+} from "./days/day17-spinlock/index.js";
 
 // DAY 1: Inverse Captcha
 console.assert(sum("1122") === 3, "sum(1122) NOK");
@@ -304,3 +309,8 @@ console.assert(
   "promenade(day16Programs, day16Input, 1_000_000_000).modulo NOK"
 );
 console.info("Day 16-2", promenade(day16Programs, day16Input, 34).programs);
+
+// DAY 17 : Spinlock
+console.assert(spinlock(3, 2017) === 638, "spinlock(3, 2017) NOK");
+console.info("Day 17-1", spinlock(day17Input, 2017));
+console.info("Day 17-2", neighbor0(day17Input, 50_000_000));
