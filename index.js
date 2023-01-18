@@ -59,6 +59,7 @@ import {
   severity,
 } from "./days/day13-packet-scanners/index.js";
 import { day14Input, usage } from "./days/day14-disk-defragmentation/index.js";
+import { day15Input, judge } from "./days/day15-dueling-generators/index.js";
 
 // DAY 1: Inverse Captcha
 console.assert(sum("1122") === 3, "sum(1122) NOK");
@@ -274,3 +275,12 @@ console.assert(usage("flqrgnkx").used === 8108, "usage('flqrgnkx').used NOK");
 console.info("Day 14-1", usage(day14Input).used);
 console.assert(usage("flqrgnkx").zones === 1242, "usage('flqrgnkx').zones NOK");
 console.info("Day 14-2", usage(day14Input).zones);
+
+// DAY 15: Dueling Generators
+console.assert(judge(65, 8921) === 588, "judge(65, 8921) NOK");
+console.info("Day 15-1", judge(day15Input.A, day15Input.B));
+console.assert(
+  judge(65, 8921, 4, 8, 5_000_000) === 309,
+  "judge(65, 8921, 4, 8, 5_000_000) NOK"
+);
+console.info("Day 15-2", judge(day15Input.A, day15Input.B, 4, 8, 5_000_000));
