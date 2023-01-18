@@ -52,6 +52,12 @@ import {
   day12Input,
   day12TestInput,
 } from "./days/day12-digital-plumber/index.js";
+import {
+  day13Input,
+  day13TestInput,
+  delay,
+  severity,
+} from "./days/day13-packet-scanners/index.js";
 
 // DAY 1: Inverse Captcha
 console.assert(sum("1122") === 3, "sum(1122) NOK");
@@ -255,3 +261,9 @@ console.assert(
   "connectionsGroups(day12TestInput) NOK"
 );
 console.info("Day 12-2", connectionsGroups(day12Input));
+
+// DAY 13: Packet Scanners
+console.assert(severity(day13TestInput) === 24, "severity(day13TestInput) NOK");
+console.info("Day 13-1", severity(day13Input));
+console.assert(delay(day13TestInput) === 10, "delay(day13TestInput) NOK");
+console.info("Day 13-2", delay(day13Input));
