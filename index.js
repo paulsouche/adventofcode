@@ -58,6 +58,7 @@ import {
   delay,
   severity,
 } from "./days/day13-packet-scanners/index.js";
+import { day14Input, usage } from "./days/day14-disk-defragmentation/index.js";
 
 // DAY 1: Inverse Captcha
 console.assert(sum("1122") === 3, "sum(1122) NOK");
@@ -267,3 +268,9 @@ console.assert(severity(day13TestInput) === 24, "severity(day13TestInput) NOK");
 console.info("Day 13-1", severity(day13Input));
 console.assert(delay(day13TestInput) === 10, "delay(day13TestInput) NOK");
 console.info("Day 13-2", delay(day13Input));
+
+// DAY 14: Disk Defragmentation
+console.assert(usage("flqrgnkx").used === 8108, "usage('flqrgnkx').used NOK");
+console.info("Day 14-1", usage(day14Input).used);
+console.assert(usage("flqrgnkx").zones === 1242, "usage('flqrgnkx').zones NOK");
+console.info("Day 14-2", usage(day14Input).zones);
