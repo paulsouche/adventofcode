@@ -45,6 +45,7 @@ import {
   simpleHash,
   structure,
 } from "./days/day10-knot-hash/index.js";
+import { day11Input, hexSteps } from "./days/day11-hex-ed/index.js";
 
 // DAY 1: Inverse Captcha
 console.assert(sum("1122") === 3, "sum(1122) NOK");
@@ -200,3 +201,39 @@ console.assert(
   "hash(structure(256), '1,2,4') NOK"
 );
 console.info("Day 10-2", hash(structure(256), day10Input.join()));
+
+// DAY 11: Hex Ed
+console.assert(
+  hexSteps("ne,ne,ne").length === 3,
+  "hexSteps('ne,ne,ne').length NOK"
+);
+console.assert(
+  hexSteps("ne,ne,sw,sw").length === 0,
+  "hexSteps('ne,ne,sw,sw').length NOK"
+);
+console.assert(
+  hexSteps("ne,ne,s,s").length === 2,
+  "hexSteps('ne,ne,s,s').length NOK"
+);
+console.assert(
+  hexSteps("se,sw,se,sw,sw").length === 3,
+  "hexSteps('se,sw,se,sw,sw').length NOK"
+);
+console.info("Day 11-1", hexSteps(day11Input).length);
+console.assert(
+  hexSteps("ne,ne,ne").furthest === 3,
+  "hexSteps('ne,ne,ne').furthest NOK"
+);
+console.assert(
+  hexSteps("ne,ne,sw,sw").furthest === 2,
+  "hexSteps('ne,ne,sw,sw').furthest NOK"
+);
+console.assert(
+  hexSteps("ne,ne,s,s").furthest === 2,
+  "hexSteps('ne,ne,s,s').furthest NOK"
+);
+console.assert(
+  hexSteps("se,sw,se,sw,sw").furthest === 3,
+  "hexSteps('se,sw,se,sw,sw').furthest NOK"
+);
+console.info("Day 11-2", hexSteps(day11Input).furthest);
