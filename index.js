@@ -83,6 +83,13 @@ import {
   day19TestInput,
   tube,
 } from "./days/day19-a-series-of-tubes/index..js";
+import {
+  closest,
+  day20Input,
+  day20TestInput1,
+  day20TestInput2,
+  left,
+} from "./days/day20-particle-swarm/index.js";
 
 // DAY 1: Inverse Captcha
 console.assert(sum("1122") === 3, "sum(1122) NOK");
@@ -342,3 +349,9 @@ console.assert(
   "tube(day19TestInput).step NOK"
 );
 console.info("Day 19-2", tube(day19Input).totalSteps);
+
+// DAY 20: Particle Swarm
+console.assert(closest(day20TestInput1) === 0, "closest(day20TestInput) NOK");
+console.info("Day 20-1", closest(day20Input));
+console.assert(left(day20TestInput2) === 1, "left(day20TestInput2) NOK");
+console.info("Day 20-2", left(day20Input));
