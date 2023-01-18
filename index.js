@@ -38,6 +38,13 @@ import {
   largestEver,
 } from "./days/day08-i-heard-you-like-registers/index.js";
 import { day9Input, stream } from "./days/day09-stream-processing/index.js";
+import {
+  day10Input,
+  day10TestInput,
+  hash,
+  simpleHash,
+  structure,
+} from "./days/day10-knot-hash/index.js";
 
 // DAY 1: Inverse Captcha
 console.assert(sum("1122") === 3, "sum(1122) NOK");
@@ -169,3 +176,27 @@ console.assert(
   "stream('{o'i!a,<{i<a>').garbage NOK"
 );
 console.info("Day 9-2:", stream(day9Input).garbage);
+
+// DAY 10: Knot Hash
+console.assert(
+  simpleHash(structure(5), day10TestInput) === 12,
+  "simpleHash(structure(5), day10TestInput) NOK"
+);
+console.info("Day 10-1", simpleHash(structure(256), day10Input));
+console.assert(
+  hash(structure(256), "") === "a2582a3a0e66e6e86e3812dcb672a272",
+  "hash(structure(256), '') NOK"
+);
+console.assert(
+  hash(structure(256), "AoC 2017") === "33efeb34ea91902bb2f59c9920caa6cd",
+  "hash(structure(256), 'AoC 2017') NOK"
+);
+console.assert(
+  hash(structure(256), "1,2,3") === "3efbe78a8d82f29979031a4aa0b16a9d",
+  "hash(structure(256), '1,2,3') NOK"
+);
+console.assert(
+  hash(structure(256), "1,2,4") === "63960835bcdc130f0b66d7ff4f6a5a8e",
+  "hash(structure(256), '1,2,4') NOK"
+);
+console.info("Day 10-2", hash(structure(256), day10Input.join()));
