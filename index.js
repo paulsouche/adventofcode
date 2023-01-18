@@ -37,6 +37,7 @@ import {
   largest,
   largestEver,
 } from "./days/day08-i-heard-you-like-registers/index.js";
+import { day9Input, stream } from "./days/day09-stream-processing/index.js";
 
 // DAY 1: Inverse Captcha
 console.assert(sum("1122") === 3, "sum(1122) NOK");
@@ -128,3 +129,43 @@ console.assert(
   "largestEver(day8TestInput) NOK"
 );
 console.info("Day 8-2:", largestEver(day8Input));
+
+// DAY 9: Stream Processing
+console.assert(stream("{}").score === 1, "stream('{}').score NOK");
+console.assert(stream("{{{}}}").score === 6, "stream('{{{}}}').score NOK");
+console.assert(stream("{{},{}}").score === 5, "stream('{{},{}}').score NOK");
+console.assert(
+  stream("{{{},{},{{}}}}").score === 16,
+  "stream('{{{},{},{{}}}}').score NOK"
+);
+console.assert(
+  stream("{<a>,<a>,<a>,<a>}").score === 1,
+  "stream('{<a>,<a>,<a>,<a>}').score NOK"
+);
+console.assert(
+  stream("{{<ab>},{<ab>},{<ab>},{<ab>}}").score === 9,
+  "stream('{{<ab>},{<ab>},{<ab>},{<ab>}}').score NOK"
+);
+console.assert(
+  stream("{{<!!>},{<!!>},{<!!>},{<!!>}}").score === 9,
+  "stream('{{<!!>},{<!!>},{<!!>},{<!!>}}').score NOK"
+);
+console.assert(
+  stream("{{<a!>},{<a!>},{<a!>},{<ab>}}").score === 3,
+  "stream('{{<a!>},{<a!>},{<a!>},{<ab>}}').score NOK"
+);
+console.info("Day 9-1:", stream(day9Input).score);
+console.assert(stream("<>").garbage === 0, "stream('<>').garbage NOK");
+console.assert(
+  stream("<random characters>").garbage === 17,
+  "stream('<random characters>').garbage NOK"
+);
+console.assert(stream("<<<<>").garbage === 3, "stream('<<<<>').garbage NOK");
+console.assert(stream("<{!>}>").garbage === 2, "stream('<{!>}>').garbage NOK");
+console.assert(stream("<!!>").garbage === 0, "stream('<!!>').garbage NOK");
+console.assert(stream("<!!!>>").garbage === 0, "stream('<!!!>>').garbage NOK");
+console.assert(
+  stream("<{o'i!a,<{i<a>").garbage === 10,
+  "stream('{o'i!a,<{i<a>').garbage NOK"
+);
+console.info("Day 9-2:", stream(day9Input).garbage);
