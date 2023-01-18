@@ -46,6 +46,12 @@ import {
   structure,
 } from "./days/day10-knot-hash/index.js";
 import { day11Input, hexSteps } from "./days/day11-hex-ed/index.js";
+import {
+  connectionsCount,
+  connectionsGroups,
+  day12Input,
+  day12TestInput,
+} from "./days/day12-digital-plumber/index.js";
 
 // DAY 1: Inverse Captcha
 console.assert(sum("1122") === 3, "sum(1122) NOK");
@@ -237,3 +243,15 @@ console.assert(
   "hexSteps('se,sw,se,sw,sw').furthest NOK"
 );
 console.info("Day 11-2", hexSteps(day11Input).furthest);
+
+// DAY 12: Digital Plumber
+console.assert(
+  connectionsCount(day12TestInput) === 6,
+  "connectionsCount(day12TestInput) NOK"
+);
+console.info("Day 12-1", connectionsCount(day12Input));
+console.assert(
+  connectionsGroups(day12TestInput) === 2,
+  "connectionsGroups(day12TestInput) NOK"
+);
+console.info("Day 12-2", connectionsGroups(day12Input));
