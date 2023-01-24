@@ -90,6 +90,11 @@ import {
   day20TestInput2,
   left,
 } from "./days/day20-particle-swarm/index.js";
+import {
+  day21Input,
+  day21TestInput,
+  pixelsOn,
+} from "./days/day21-fractal-art/index.js";
 
 // DAY 1: Inverse Captcha
 console.assert(sum("1122") === 3, "sum(1122) NOK");
@@ -355,3 +360,11 @@ console.assert(closest(day20TestInput1) === 0, "closest(day20TestInput) NOK");
 console.info("Day 20-1", closest(day20Input));
 console.assert(left(day20TestInput2) === 1, "left(day20TestInput2) NOK");
 console.info("Day 20-2", left(day20Input));
+
+// DAY 21: Fractal Art
+console.assert(
+  pixelsOn(day21TestInput, 2) === 12,
+  "pixelsOn(day21TestInput, 2) NOK"
+);
+console.info("Day 21-1", pixelsOn(day21Input, 5));
+console.info("Day 21-2", pixelsOn(day21Input, 18));
