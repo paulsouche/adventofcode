@@ -95,6 +95,11 @@ import {
   day21TestInput,
   pixelsOn,
 } from "./days/day21-fractal-art/index.js";
+import {
+  day22Input,
+  day22TestInput,
+  infections,
+} from "./days/day22-sporifica-virus/index.js";
 
 // DAY 1: Inverse Captcha
 console.assert(sum("1122") === 3, "sum(1122) NOK");
@@ -368,3 +373,23 @@ console.assert(
 );
 console.info("Day 21-1", pixelsOn(day21Input, 5));
 console.info("Day 21-2", pixelsOn(day21Input, 18));
+
+// DAY 22: Sporifica Virus
+console.assert(
+  infections(day22TestInput, 7) === 5,
+  "infections(day22TestInput, 7) NOK"
+);
+console.assert(
+  infections(day22TestInput, 70) === 41,
+  "infections(day22TestInput, 70) NOK"
+);
+console.assert(
+  infections(day22TestInput, 10_000) === 5587,
+  "infections(day22TestInput, 10_000) NOK"
+);
+console.info("Day 22-1", infections(day22Input, 10_000));
+console.assert(
+  infections(day22TestInput, 100, true) === 26,
+  "infections(day22TestInput, 100, true) NOK"
+);
+console.info("Day 22-2", infections(day22Input, 10_000_000, true));
