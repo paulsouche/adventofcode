@@ -100,6 +100,11 @@ import {
   day22TestInput,
   infections,
 } from "./days/day22-sporifica-virus/index.js";
+import {
+  day23Input,
+  numberOfMul,
+  programOutput,
+} from "./days/day23-coprocessor-conflagration/index.js";
 
 // DAY 1: Inverse Captcha
 console.assert(sum("1122") === 3, "sum(1122) NOK");
@@ -393,3 +398,7 @@ console.assert(
   "infections(day22TestInput, 100, true) NOK"
 );
 console.info("Day 22-2", infections(day22Input, 10_000_000, true));
+
+// DAY 23: Coprocessor Conflagration
+console.info("Day 23-1", numberOfMul(day23Input));
+console.info("Day 23-2", programOutput(day23Input));
