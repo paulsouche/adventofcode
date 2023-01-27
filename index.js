@@ -105,6 +105,12 @@ import {
   numberOfMul,
   programOutput,
 } from "./days/day23-coprocessor-conflagration/index.js";
+import {
+  bestBridge,
+  day24Input,
+  day24TestInput,
+  strongestBridge,
+} from "./days/day24-electromagnetic-moat/index.js";
 
 // DAY 1: Inverse Captcha
 console.assert(sum("1122") === 3, "sum(1122) NOK");
@@ -402,3 +408,15 @@ console.info("Day 22-2", infections(day22Input, 10_000_000, true));
 // DAY 23: Coprocessor Conflagration
 console.info("Day 23-1", numberOfMul(day23Input));
 console.info("Day 23-2", programOutput(day23Input));
+
+// DAY 24: Electromagnetic Moat
+console.assert(
+  strongestBridge(day24TestInput) === 31,
+  "strongestBridge(day24TestInput) NOK"
+);
+console.info("Day 24-1", strongestBridge(day24Input));
+console.assert(
+  bestBridge(day24TestInput) === 19,
+  "bestBridge(day24TestInput) NOK"
+);
+console.info("Day 24-2", bestBridge(day24Input));
