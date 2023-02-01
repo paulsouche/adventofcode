@@ -111,6 +111,11 @@ import {
   day24TestInput,
   strongestBridge,
 } from "./days/day24-electromagnetic-moat/index.js";
+import {
+  day25Input,
+  day25TestInput,
+  diagnosticChecksum,
+} from "./days/day25-the-halting-problem/index.js";
 
 // DAY 1: Inverse Captcha
 console.assert(sum("1122") === 3, "sum(1122) NOK");
@@ -420,3 +425,10 @@ console.assert(
   "bestBridge(day24TestInput) NOK"
 );
 console.info("Day 24-2", bestBridge(day24Input));
+
+// DAY 25: The Halting Problem
+console.assert(
+  diagnosticChecksum(day25TestInput) === 3,
+  "diagnosticChecksum(day25TestInput) NOK"
+);
+console.info("Day 25-1", diagnosticChecksum(day25Input));
