@@ -1,0 +1,10 @@
+﻿// See https://aka.ms/new-console-template for more information
+using Namespace;
+
+var fileStream = File.ReadAllText(Path.Combine("Program", "input.txt"));
+
+var part1 = new Part1(fileStream);
+var part2 = new Part2(fileStream);
+
+Console.WriteLine(part1.Solve()); // 20107
+Console.WriteLine(part2.Solve()); // 8172507
