@@ -14,3 +14,23 @@ func SumInts(s []int) (total int) {
 	}
 	return
 }
+
+func Filter[T any](array []T, predicate func(T, int) bool) (output []T) {
+	for index, item := range array {
+		if predicate(item, index) {
+			output = append(output, item)
+		}
+	}
+	return
+}
+
+func Some[T any](array []T, predicate func(T, int) bool) (output bool) {
+	output = false
+	for index, item := range array {
+		if predicate(item, index) {
+			output = true
+			break
+		}
+	}
+	return
+}
