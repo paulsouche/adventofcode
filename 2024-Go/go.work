@@ -4,4 +4,5 @@ use (
 	./common
 	./day01-historian-hysteria
 	./day02-red-nosed-reports
+	./day03-mull-it-over
 )

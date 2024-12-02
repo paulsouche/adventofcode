@@ -34,3 +34,11 @@ func Some[T any](array []T, predicate func(T, int) bool) (output bool) {
 	}
 	return
 }
+
+func MultiplyInts(s []int) (total int) {
+	total = 1
+	for _, val := range s {
+		total *= val
+	}
+	return
+}
