@@ -35,6 +35,35 @@ func Some[T any](array []T, predicate func(T, int) bool) (output bool) {
 	return
 }
 
+func Every[T any](array []T, predicate func(T, int) bool) (output bool) {
+	output = true
+	for index, item := range array {
+		if !predicate(item, index) {
+			output = false
+			break
+		}
+	}
+	return
+}
+
+func ToSet[T comparable](array []T) (set map[T]bool) {
+	set = make(map[T]bool)
+	for _, str := range array {
+		set[str] = true
+	}
+	return
+}
+
+func Includes[T comparable](array []T, value T) (output bool) {
+	output = false
+	for _, item := range array {
+		if item == value {
+			output = true
+		}
+	}
+	return
+}
+
 func MultiplyInts(s []int) (total int) {
 	total = 1
 	for _, val := range s {

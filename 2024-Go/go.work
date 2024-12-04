@@ -6,4 +6,5 @@ use (
 	./day02-red-nosed-reports
 	./day03-mull-it-over
 	./day04-ceres-search
+  ./day05-print-queue
 )
