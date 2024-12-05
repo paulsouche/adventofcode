@@ -7,4 +7,5 @@ use (
 	./day03-mull-it-over
 	./day04-ceres-search
   ./day05-print-queue
+  ./day06-guard-gallivant
 )
