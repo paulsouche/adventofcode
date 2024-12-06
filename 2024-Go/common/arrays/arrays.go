@@ -71,3 +71,14 @@ func MultiplyInts(s []int) (total int) {
 	}
 	return
 }
+
+func Reverse[T comparable](s []T) []T {
+	size := len(s)
+	opposite := make([]T, size)
+
+	for i, e := range s {
+		opposite[size-1-i] = e
+	}
+
+	return opposite
+}

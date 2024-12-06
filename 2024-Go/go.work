@@ -8,4 +8,5 @@ use (
 	./day04-ceres-search
   ./day05-print-queue
   ./day06-guard-gallivant
+  ./day07-bridge-repair
 )
