@@ -9,4 +9,5 @@ use (
   ./day05-print-queue
   ./day06-guard-gallivant
   ./day07-bridge-repair
+  ./day08-resonant-collinearity
 )
