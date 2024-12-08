@@ -10,4 +10,5 @@ use (
   ./day06-guard-gallivant
   ./day07-bridge-repair
   ./day08-resonant-collinearity
+	./day09-disk-fragmenter
 )
