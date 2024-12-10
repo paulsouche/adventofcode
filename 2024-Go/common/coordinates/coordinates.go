@@ -41,6 +41,25 @@ var Adjacents = []image.Point{
 	},
 }
 
+var CrossAdjacents = []image.Point{
+	{
+		X: -1,
+		Y: 0,
+	},
+	{
+		X: 0,
+		Y: -1,
+	},
+	{
+		X: 0,
+		Y: 1,
+	},
+	{
+		X: 1,
+		Y: 0,
+	},
+}
+
 var CrossBranches = [][]image.Point{
 	{
 		{
