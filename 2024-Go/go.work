@@ -12,4 +12,5 @@ use (
   ./day08-resonant-collinearity
 	./day09-disk-fragmenter
 	./day10-hoof-it
+	./day11-plutonian-pebbles
 )
