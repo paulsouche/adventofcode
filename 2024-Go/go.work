@@ -13,4 +13,5 @@ use (
 	./day09-disk-fragmenter
 	./day10-hoof-it
 	./day11-plutonian-pebbles
+	./day12-garden-groups
 )
