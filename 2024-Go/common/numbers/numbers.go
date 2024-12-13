@@ -17,3 +17,22 @@ func SafeConvertStrToInt(str string) (integer int) {
 	}
 	return
 }
+
+func GCD(a, b int) int {
+	for b != 0 {
+		t := b
+		b = a % b
+		a = t
+	}
+	return a
+}
+
+func LCM(integers ...int) int {
+	result := integers[0] * integers[1] / GCD(integers[0], integers[1])
+
+	for i := 0; i < len(integers[2:]); i++ {
+		result = LCM(result, integers[i+2])
+	}
+
+	return result
+}

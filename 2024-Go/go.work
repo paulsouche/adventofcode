@@ -15,4 +15,5 @@ use (
 	./day11-plutonian-pebbles
 	./day12-garden-groups
 	./day13-claw-contraption
+	./day14-restroom-redoubt
 )
