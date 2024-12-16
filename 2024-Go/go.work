@@ -18,4 +18,5 @@ use (
 	./day14-restroom-redoubt
 	./day15-warehouse-woes
 	./day16-reindeer-maze
+	./day17-chronospatial-computer
 )
