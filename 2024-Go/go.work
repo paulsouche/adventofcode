@@ -19,4 +19,5 @@ use (
 	./day15-warehouse-woes
 	./day16-reindeer-maze
 	./day17-chronospatial-computer
+	./day18-ram-run
 )
