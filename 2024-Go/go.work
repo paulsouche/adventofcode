@@ -20,4 +20,5 @@ use (
 	./day16-reindeer-maze
 	./day17-chronospatial-computer
 	./day18-ram-run
+	./day19-linen-layout
 )
