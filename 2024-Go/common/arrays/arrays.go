@@ -31,6 +31,14 @@ func Filter[T any](array []T, predicate func(T, int) bool) (output []T) {
 	return
 }
 
+func Reduce[T, U any](array []T, transform func(U, T, int) U, initialValue U) (output U) {
+	output = initialValue
+	for index, item := range array {
+		output = transform(output, item, index)
+	}
+	return
+}
+
 func Some[T any](array []T, predicate func(T, int) bool) (output bool) {
 	output = false
 	for index, item := range array {
