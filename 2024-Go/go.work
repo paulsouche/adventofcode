@@ -24,4 +24,5 @@ use (
 	./day20-race-condition
 	./day21-keypad-conundrum
 	./day22-monkey-market
+	./day23-lan-party
 )

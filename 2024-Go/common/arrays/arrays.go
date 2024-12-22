@@ -69,6 +69,14 @@ func ToSet[T comparable](array []T) (set map[T]bool) {
 	return
 }
 
+func ToArray[T comparable, U any](set map[T]U) (arr []T) {
+	arr = make([]T, 0)
+	for key := range set {
+		arr = append(arr, key)
+	}
+	return
+}
+
 func Includes[T comparable](array []T, value T) (output bool) {
 	output = false
 	for _, item := range array {
