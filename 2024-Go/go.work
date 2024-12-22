@@ -23,4 +23,5 @@ use (
 	./day19-linen-layout
 	./day20-race-condition
 	./day21-keypad-conundrum
+	./day22-monkey-market
 )
