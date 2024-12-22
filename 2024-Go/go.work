@@ -22,4 +22,5 @@ use (
 	./day18-ram-run
 	./day19-linen-layout
 	./day20-race-condition
+	./day21-keypad-conundrum
 )
