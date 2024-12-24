@@ -26,4 +26,5 @@ use (
 	./day22-monkey-market
 	./day23-lan-party
 	./day24-crossed-wires
+	./day25-code-chronicle
 )
